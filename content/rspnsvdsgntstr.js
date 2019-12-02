@@ -139,16 +139,25 @@ var Tester = {
 	resizeWindowToSize: (id) => {
 		var selectedSize = Tester.getSizeById(id),
 			selectedWidth = selectedSize.width,
-			selectedHeight = selectedSize.height,
-			left = (window.screen.availWidth - selectedWidth) / 2,
-			top = (window.screen.availHeight - selectedHeight) / 2;
+			selectedHeight = selectedSize.height;
+		
+		Tester.resizeWindow(selectedWidth, selectedHeight);
+	},
+	resizeWindow: (selectedWidth, selectedHeight) => {
+		var left = (window.screen.availWidth - selectedWidth) / 2,
+			top = (window.screen.availHeight - selectedHeight) / 2,
+			screenW = document.getElementById('screenWidth'),
+			screenH = document.getElementById('screenHeight');
 			
 		if (top < 0) {
 			top = 0;
 		}
-			
+		
 		window.resizeTo(selectedWidth, selectedHeight);
 		window.moveTo(left, top);
+		
+		screenW.value = selectedWidth;
+		screenH.value = selectedHeight;
 	},
 	getSizeById: (id) => {
 		for (var i = 0; i < Tester.sizesList.length; i++) {
@@ -166,6 +175,12 @@ var Tester = {
 		if (locationbar.value.length > 0) {	
 			browser.loadURI(locationbar.value);
 		}
+	},
+	updateScreenSize: () => {
+		var screenW = document.getElementById('screenWidth'),
+			screenH = document.getElementById('screenHeight');
+		
+		Tester.resizeWindow(screenW.value, screenH.value);
 	}
 };
 window.addEventListener('DOMContentLoaded', Tester.init);

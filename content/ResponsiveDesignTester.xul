@@ -17,6 +17,8 @@
 		<menulist id="sizesList">
 			<menupopup id="sizesListPopup" onpopuphidden="Tester.sizesSelectHandle();" />
 		</menulist>
+		<textbox id="screenWidth" flex="1" onchange="Tester.updateScreenSize();" value="375" />
+		<textbox id="screenHeight" flex="1" onchange="Tester.updateScreenSize();" value="667" />
 	</hbox>
 	<browser type="content" id="testerWindow" src="http://www.mozilla.org" flex="1"/>
 </window>
