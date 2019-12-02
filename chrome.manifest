@@ -1,0 +1,4 @@
+content rspnsvdsgn content/
+overlay chrome://komodo/content/komodo.xul chrome://rspnsvdsgn/content/overlay.xul
+#overlay chrome://komodo/content/pref/pref-html.xul chrome://rspnsvdsgn/content/pref-overlay.xul
+skin rspnsvdsgn classic/1.0 skin/

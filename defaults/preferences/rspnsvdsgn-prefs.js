@@ -1,0 +1,9 @@
+pref("extensions.rspnsvdsgn.useFilewatcher", false);
+pref("extensions.rspnsvdsgn.compilerEnabled", true);
+pref("extensions.rspnsvdsgn.compressFile", false);
+pref("extensions.rspnsvdsgn.fileWatcher", "");
+pref("extensions.rspnsvdsgn.tooltipY", 8);
+pref("extensions.rspnsvdsgn.showWarning", true);
+pref("extensions.rspnsvdsgn.msgType", "web-notifications");
+pref("extensions.rspnsvdsgn.useFileScopes", false);
+pref("extensions.rspnsvdsgn.fileScopes", "[]");

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<?xml-stylesheet href="less://komodo/skin/global/global.less" type="text/css"?>
+<?xml-stylesheet href="less://less/skin/less.less" type="text/css"?>
+
+<prefwindow id="rspnsvdsgn-prefs"
+	 title="LESS Preferences"
+	 width="300"
+	 height="340"
+	 xmlns:html="http://www.w3.org/1999/xhtml"
+	 xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+	
+	<prefpane id="less-pane" label="LESS Preferences">
+		<preferences>
+			<preference id="pref_tooltipY" name="extensions.less.tooltipY" type="int"/>
+			<preference id="pref_compile" name="extensions.less.compilerEnabled" type="bool"/>
+			<preference id="pref_compress" name="extensions.less.compressFile" type="bool"/>
+			<preference id="pref_msgType" name="extensions.less.msgType" type="string"/>
+		</preferences>
+		
+		<!--<image maxheight="64" maxwidth="252" src="chrome://less/content/less-icon.png" />-->
+		
+		<html:h3>
+			On file save
+		</html:h3>
+		<checkbox id="compile-file" preference="pref_compile" checked="true" label="Compile file"/>
+		
+		<checkbox id="compress-file" preference="pref_compress" checked="true" label="Compress file"/>
+			
+		<html:h3>
+			Advandced Settings
+		</html:h3>
+		<label value="Message Type" />
+		<menulist id="msgType" preference="pref_msgType" label="Message Type">
+			<menupopup>
+				<menuitem value="notify" label="Notify"/>
+				<menuitem value="web-notifications" label="Web Notifications"/>
+			</menupopup>
+		</menulist>
+		
+		<label value="Calibrate tooltip vertical position" />
+		<menulist id="tooltipY" preference="pref_tooltipY" label="Calibrate tooltip vertical position">
+			<menupopup>
+				<menuitem value="0" label="10"/>
+				<menuitem value="1" label="9"/>
+				<menuitem value="2" label="8"/>
+				<menuitem value="3" label="7"/>
+				<menuitem value="4" label="6"/>
+				<menuitem value="5" label="5"/>
+				<menuitem value="6" label="4"/>
+				<menuitem value="7" label="3"/>
+				<menuitem value="8" label="2"/>
+				<menuitem value="9" label="1"/>
+				<menuitem value="10" label="0"/>
+				<menuitem value="11" label="-1"/>
+				<menuitem value="12" label="-2"/>
+				<menuitem value="13" label="-3"/>
+				<menuitem value="14" label="-4"/>
+				<menuitem value="15" label="-5"/>
+				<menuitem value="16" label="-6"/>
+				<menuitem value="17" label="-7"/>
+				<menuitem value="18" label="-8"/>
+				<menuitem value="19" label="-9"/>
+				<menuitem value="20" label="-10"/>
+			</menupopup>
+		</menulist>
+	</prefpane>
+
+</prefwindow>
+
